@@ -27,12 +27,7 @@ section {
 
 .hero {
   padding: 67px;
-  background: linear-gradient(
-    to bottom,
-    var(--orange) 0,
-    var(--orange) calc(100% - 154px),
-    var(--white) calc(100% - 154px)
-  );
+  background: linear-gradient(to bottom, var(--orange) 85%, var(--white) 85%);
 }
 .container {
   display: flex;
@@ -41,6 +36,7 @@ section {
 }
 .column {
   width: 50%;
+  position: relative;
 }
 /* -- Columna esquerra */
 .column first-child {
@@ -114,10 +110,9 @@ h1 {
   display: inline-block;
   padding: 24px 40px;
   align-items: flex start;
-  gap: 10px;
   background-color: var(--electric-orange);
   color: var(--white);
-  border-radius: 40px;
+  border-radius: 10px;
   text-decoration: none;
   font-family: "Helvetica Neue";
   font-size: 20px;
@@ -165,15 +160,16 @@ h1 {
 }
 .shape {
   position: absolute;
-  top: 0;
   right: 0;
-  width: 581px;
-  height: 803px;
-  border-radius: 0 0 290px 290px;
+  width: 580px;
+  height: 790px;
+  border-radius: 0 0 400px 400px;
   background: linear-gradient(
-    180deg var(--orange) 0%,
-    var(--light-orange) 100%
+    180deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.8) 100%
   );
+  z-index: 0;
 }
 .column last-child img {
   position: absolute;
@@ -182,7 +178,10 @@ h1 {
   width: 100%;
   height: auto;
 }
-
+.toy {
+  position: relative;
+  z-index: 1;
+}
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
